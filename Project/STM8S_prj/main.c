@@ -119,7 +119,8 @@ void main(void)
       //正常输出缓慢上升
       slope_time_cnt+=10;
       if(slope_time_cnt>=slope_time*1000)
-        slope_time_cnt=0;
+         while(GPIO_ReadInputPin(GPIOD, GPIO_PIN_3)==SET);//读取等待释放
+        //slope_time_cnt=0;
       TIM1_SetCompare3(get_slope_add(slope_time,slope_time_cnt,TIM_PERIOD));
       TIM1_CtrlPWMOutputs(ENABLE);//开启输出
     }

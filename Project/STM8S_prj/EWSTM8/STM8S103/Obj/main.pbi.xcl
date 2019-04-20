@@ -1,18 +1,18 @@
-"D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\main.c"
+"D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\main.c"
 -std=c99
 -ferror-limit=0
 -I
-D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\..
+D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\..
 -I
-D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\..\..\..\Libraries\STM8S_StdPeriph_Driver\inc
+D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\..\..\..\Libraries\STM8S_StdPeriph_Driver\inc
 -I
 F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\stm8\inc
 -I
 F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\stm8\inc\c
 -I
-D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template
+D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj
 -I
-D:\文档\软件包\STM8S_StdPeriph_Lib\Libraries\STM8S_StdPeriph_Driver\inc
+D:\Projects\STM8S_tzy_pwm\Libraries\STM8S_StdPeriph_Driver\inc
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

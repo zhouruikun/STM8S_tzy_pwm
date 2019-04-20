@@ -23,9 +23,9 @@ param([String]$debugfile = "");
 
 if ($debugfile -eq "")
 {
-& "F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\settings\Project.STM8S103.general.xcl" --backend -f "D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\settings\Project.STM8S103.driver.xcl" 
+& "F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\settings\Project.STM8S103.general.xcl" --backend -f "D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\settings\Project.STM8S103.driver.xcl" 
 }
 else
 {
-& "F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\settings\Project.STM8S103.general.xcl" --debug_file=$debugfile --backend -f "D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\settings\Project.STM8S103.driver.xcl" 
+& "F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\settings\Project.STM8S103.general.xcl" --debug_file=$debugfile --backend -f "D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\settings\Project.STM8S103.driver.xcl" 
 }

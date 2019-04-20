@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\settings\Project.STM8S103.general.xcl" --backend -f "D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\settings\Project.STM8S103.driver.xcl" 
+"F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\settings\Project.STM8S103.general.xcl" --backend -f "D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\settings\Project.STM8S103.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\settings\Project.STM8S103.general.xcl" "--debug_file=%~1" --backend -f "D:\文档\软件包\STM8S_StdPeriph_Lib\Project\STM8S_StdPeriph_Template\EWSTM8\settings\Project.STM8S103.driver.xcl" 
+"F:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\settings\Project.STM8S103.general.xcl" "--debug_file=%~1" --backend -f "D:\Projects\STM8S_tzy_pwm\Project\STM8S_prj\EWSTM8\settings\Project.STM8S103.driver.xcl" 
 
 @echo off 
 :end

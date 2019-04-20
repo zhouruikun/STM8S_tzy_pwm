@@ -769,7 +769,7 @@
                     <item>slope_period</item>
                     <item>bit_status</item>
                     <item>((BitStatus)(GPIOx-&gt;IDR &amp; (uint8_t)GPIO_Pin))</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

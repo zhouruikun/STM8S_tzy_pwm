@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+Project/STM8S_prj/EWSTM8/STM8S103/Obj/Project.pbd.linf
+Project/STM8S_prj/EWSTM8/STM8S103/Obj/Project.pbd.browse
+Project/STM8S_prj/EWSTM8/STM8S103/Obj/Project.pbd
+Project/STM8S_prj/EWSTM8/STM8S103/Obj/main.pbi.xcl
+Project/STM8S_prj/EWSTM8/STM8S103/Obj/main.pbi
+Project/STM8S_prj/EWSTM8/settings/Project.wsdt
+Project/STM8S_prj/EWSTM8/settings/Project.STM8S103.general.xcl
+Project/STM8S_prj/EWSTM8/settings/Project.STM8S103.cspy.ps1
+Project/STM8S_prj/EWSTM8/settings/Project.STM8S103.cspy.bat
+Project/STM8S_prj/EWSTM8/settings/Project.dbgdt
