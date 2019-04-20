@@ -36,13 +36,27 @@
 #define FREQ 500                 //pwm频率 单位HZ     
 
 #define TIM_PERIOD 1000000/FREQ-1
+#define IDLE 1
+#define INIT 2
+#define OUTPUT 3
+#define END 4
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 extern int count;
+
 void delayMS(int ms)
 {
   count=ms;
   while(count>0);
+}
+int get_trig( BitStatus bit_status)
+{
+  int time =0;
+  while(bit_status == GPIO_ReadInputPin(GPIOD, GPIO_PIN_3)){
+    delayMS(10);
+    time+=10;
+  }
+  return time;
 }
 int get_key(void)
 {
@@ -59,6 +73,7 @@ int get_slope_add(int slope_period,int number,int cnt_period)
 }
 void main(void)
 {
+  int status=IDLE;
   int key_time = 0;
   int slope_time = 8;
   int slope_time_cnt = 0;
@@ -112,23 +127,41 @@ void main(void)
         }
       }
     };
+
     delayMS(10);
-    bit_status = GPIO_ReadInputPin(GPIOD, GPIO_PIN_3);//读取 
-    if (bit_status == SET)  //SET or RESET
+    switch(status)
     {
+    case IDLE:
+      if(get_trig(SET) >=100)
+      {
+        status = INIT;
+      };
+      break;
+    case INIT:
+      slope_time_cnt=0;
+      status = OUTPUT;
+      break;
+    case OUTPUT:
+      if(get_trig(RESET) >=500)
+      {
+        status = END;
+      };
       //正常输出缓慢上升
       slope_time_cnt+=10;
-      if(slope_time_cnt>=slope_time*1000)
-         while(GPIO_ReadInputPin(GPIOD, GPIO_PIN_3)==SET);//读取等待释放
-        //slope_time_cnt=0;
       TIM1_SetCompare3(get_slope_add(slope_time,slope_time_cnt,TIM_PERIOD));
       TIM1_CtrlPWMOutputs(ENABLE);//开启输出
+      if(slope_time_cnt>=slope_time*1000)
+      {
+        status = END;
+      }
+      break;
+    case END:
+      TIM1_CtrlPWMOutputs(DISABLE);//停止输出+
+      slope_time_cnt=0;
+      status = IDLE;
+      break;
+    default:break;
     }
-    else
-    {
-      TIM1_CtrlPWMOutputs(DISABLE);//停止输出
-    }
-    
   }
   
 }
